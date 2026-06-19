@@ -1,1 +1,22 @@
-
+# Build Notes
+* Opening - Context is the Queen
+Building an Agent - evaluations important
+Today will focus on Tools and KNowledge
+3 IQs - WorkIQ, Foundry IQ, FabricIQ (harnesses)
+WorkIQ (Work Context) purely SaaS, consumption or part of M365- work emails, meetins, files, chats, plus memory and reasoning over them.  Agents give intel scattered across all 365 and is security trained, that I have access to. A semantic index is created in the background that sets the 'bounds'. Need MS365, Uses EntraID.
+There is a limitation how much it will store in the semantic image.  Reads all M365 content.  For content in other platforms like Zoom need to bring into M365 system, but that data may not be security trained.
+Versioning of M365, tries to get info from latest 
+FoundryIQ (Retrieval & Grounding)- PaaS - consumption model, uses tokens - agentic retrieval across every ent source.  Plans quesries, federates, rankss. How granular of chuncking.  Need access to Foundry; MSoft stack
+Fabric IQ (Data & Semantics - MSoft Fabric, no taken count, but have a character limit)) different layers of capacity- Ontology, knowledgte graph, data agents. strucutred business meaning for AI.  Agents for data.  In Fabric, can help you clean.  Can bring unstructured data. New SaaS product. Similar to Databricks. Data agents (what models are being used, we don't know, most likely OpenAI, and their own propreitary models).
+Must bring data to Fabric Lake. 
+3 versions, Commercial, GCC, GCC High - All Foundry.Work and Fabric in Comm and GCC.
+WebIQ - Bing Search 
+# Starting to Build - need co-pilot license
+Focus on Instructions, Model, then move to IQ layer.  Question:  what are top 5 products? 
+* Inside Foundry - have created a knowledge for all products. Got from data source  - a number of pdfs in containers.  Set to minimal reasoning effort (controls cost).
+Capacity can be seen to understand cost. 
+* Data Agent inside Fabric - point to data source - 4 sequel data tables.
+Code interpreter service - if agent needs to execute some custom agents - ie provide answer in bar charts - will spin up some compute a vm, and then generate custom code.  Can use compute in MS stack or provide info of vms in Azure. 
+Agent 365 - see all agents inside tenant, also shows other cloud inventory.  Can use kill switch here.  New SkU - E7.  Can also see agents per service as well. When building agents, which UI layers will access that layer(publish only there), also can add business layer (ie Entra ID or external authentication)  Single user may have 30-40 agents. $15/mo/user Shadow tracking to LLMs.
+Agent Store - can purchase - Microsoft Agent Store
+Teams AI Library - also see agents
